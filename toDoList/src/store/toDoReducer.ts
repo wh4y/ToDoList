@@ -19,7 +19,7 @@ export const reducer = createReducer(
     initialState,
     {
         ['ADD_ITEM']: (state, action: AddItemAction) => {
-            state.ItemList.push(action.payload);
+            state.ItemList.unshift(action.payload);
         }
     }
 );
