@@ -13,9 +13,11 @@ const Header: FC = () => {
 
     const handleAdd = () => {
         const value = inputElement.current!.state.value;
+        inputElement.current!.focus();
         if(!value) return;
         dispatch(addItem(value));
         inputElement.current!.setValue('');
+        
     }
 
     return (
