@@ -9,6 +9,7 @@ const Header: FC = () => {
 
     const handleClick = () => {
         console.log(inputElement.current!.state.value);
+        inputElement.current!.setValue('');
     }
 
     return (
