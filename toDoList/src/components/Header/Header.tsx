@@ -11,7 +11,7 @@ const Header: FC = () => {
     const dispatch = useDispatch<AppDispatch>();
     const inputElement = useRef<Input>(null);
 
-    const handleClick = () => {
+    const handleAdd = () => {
         dispatch(addItem(inputElement.current!.state.value));
         inputElement.current!.setValue('');
     }
@@ -21,11 +21,12 @@ const Header: FC = () => {
             <Input
                 className={styles.toDo__input}
                 ref={inputElement}
+                onPressEnter={handleAdd}
                 placeholder={'New toDo :)'}
             />
             <PlusOutlined
                 className={styles.add__btn}
-                onClick={handleClick}
+                onClick={handleAdd}
                 twoToneColor={'#1890ff'}
             />
         </div>
