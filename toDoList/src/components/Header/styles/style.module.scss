@@ -1,3 +1,5 @@
+@import "./../../common/styles/appStyles.scss";
+
 
 .main__header {
     display: flex;
@@ -10,25 +12,26 @@
 
 .toDo__input {
     border-width: 2px;
-    border-color: black;
+    border-color: $main-color;
     max-width: 40vw;
     height: 5vh;
+    transition: .35s;
 }
 
 .add__btn {
     padding: 7px;
     font-size: 4vh;
     cursor: pointer;
-    transition: .75s;
+    transition: .75s ease;
 
     &:hover {
-        color: #1890ff;
+        color: $primary-color;
         transition: color .75s;
     }
 
     &:active {
         transform: rotate(180deg);
-        color: #66b3fce7;
+        color: $primary-active-color;
         transition: .35s ease;
     }
 }
