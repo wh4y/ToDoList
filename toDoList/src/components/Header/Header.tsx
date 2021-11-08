@@ -2,13 +2,17 @@ import { FC, useRef } from "react";
 import { Input } from "antd";
 import styles from './styles/style.module.scss';
 import { PlusOutlined } from "@ant-design/icons";
+import { useDispatch } from "react-redux";
+import { addItem } from "../../store/actionCreators";
+import { AppDispatch } from "../../store/store";
+
 
 const Header: FC = () => {
-
+    const dispatch = useDispatch<AppDispatch>();
     const inputElement = useRef<Input>(null);
 
     const handleClick = () => {
-        console.log(inputElement.current!.state.value);
+        dispatch(addItem(inputElement.current!.state.value));
         inputElement.current!.setValue('');
     }
 

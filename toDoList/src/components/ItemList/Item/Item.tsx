@@ -1,10 +1,11 @@
 import { DeleteOutlined } from "@ant-design/icons";
 import { Modal } from "antd";
 import { FC, useState } from "react";
+import { ItemType } from "../../../store/toDoReducer";
 import styles from "./styles/styles.module.scss";
 
 
-const Item: FC = () => {
+const Item: FC<ItemType> = ({value, date}) => {
 
     const [isModalOpen, SetIsModalOpen] = useState(false);
 
@@ -19,14 +20,15 @@ const Item: FC = () => {
                 onCancel={toggleModalMode}
                 footer={null}
             >
-                JOPA
+                <p>{value}</p>
+                <p>{date}</p>
             </Modal>
 
             <div
                 className={styles.item__wrapper}
                 onClick={toggleModalMode}
             >
-                <span className={styles.text}>TEXT</span>
+                <span className={styles.text}>{value}</span>
                 <DeleteOutlined
                     className={styles.delete__btn}
                     onClick={e => e.stopPropagation()}
