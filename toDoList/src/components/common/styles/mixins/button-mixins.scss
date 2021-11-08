@@ -1,0 +1,17 @@
+@import "./../variables/colors.scss";
+
+
+@mixin btn-hover-active($hover-color: $primary-color, $active-color: $primary-active-color, $deg: 0deg) {
+    transition: .75s ease;
+
+    &:hover {
+        color: $hover-color;
+        transition: color .75s;
+    }
+
+    &:active {
+        transform: rotate($deg);
+        color: $active-color;
+        transition: .35s ease;
+    }
+}

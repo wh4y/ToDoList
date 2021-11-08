@@ -1,4 +1,10 @@
 //-----------------
 //Color variables
 //-----------------
-@import "./variables/text-colors.scss";
+@import "./variables/colors.scss";
+
+
+//-----------------
+//Mixins
+//-----------------
+@import "./mixins/button-mixins.scss"

@@ -23,16 +23,6 @@
     padding: 7px;
     font-size: 4vh;
     cursor: pointer;
-    transition: .75s ease;
 
-    &:hover {
-        color: $primary-color;
-        transition: color .75s;
-    }
-
-    &:active {
-        transform: rotate(180deg);
-        color: $primary-active-color;
-        transition: .35s ease;
-    }
+    @include btn-hover-active($primary-color, $primary-active-color, 180deg);
 }
