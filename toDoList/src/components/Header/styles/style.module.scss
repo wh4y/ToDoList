@@ -1,0 +1,34 @@
+
+.main__header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 5vh;
+}
+
+.toDo__input {
+    border-width: 2px;
+    border-color: black;
+    max-width: 40vw;
+    height: 5vh;
+}
+
+.add__btn {
+    padding: 7px;
+    font-size: 4vh;
+    cursor: pointer;
+    transition: .75s;
+
+    &:hover {
+        color: #1890ff;
+        transition: color .75s;
+    }
+
+    &:active {
+        transform: rotate(180deg);
+        color: #66b3fce7;
+        transition: .35s ease;
+    }
+}

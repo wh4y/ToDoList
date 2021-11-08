@@ -1,4 +1,5 @@
 import './App.scss';
+import 'antd/dist/antd.css'
 import Header from './components/Header/Header';
 
 function App() {
