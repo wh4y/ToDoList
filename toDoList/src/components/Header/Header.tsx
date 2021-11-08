@@ -12,7 +12,9 @@ const Header: FC = () => {
     const inputElement = useRef<Input>(null);
 
     const handleAdd = () => {
-        dispatch(addItem(inputElement.current!.state.value));
+        const value = inputElement.current!.state.value;
+        if(!value) return;
+        dispatch(addItem(value));
         inputElement.current!.setValue('');
     }
 
