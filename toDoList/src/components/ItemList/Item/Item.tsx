@@ -47,7 +47,6 @@ const Item: FC<ItemType> = ({ value, date, id }) => {
     return (
         <>
             <Modal
-                key={v4()}
                 visible={isModalOpen}
                 onCancel={handleModalCancel}
                 footer={[
@@ -57,7 +56,6 @@ const Item: FC<ItemType> = ({ value, date, id }) => {
                 ]}
             >
                 <Input.TextArea
-                    key={v4()}
                     autoSize
                     onChange={handleChange}
                     allowClear
