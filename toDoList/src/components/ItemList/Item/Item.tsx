@@ -33,7 +33,7 @@ const Item: FC<ItemType> = ({ value, date, id }) => {
         dispatch(deleteItem(id));
     }
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
         setInputValue(e.target.value);
     }
 
@@ -54,7 +54,8 @@ const Item: FC<ItemType> = ({ value, date, id }) => {
                     </Button>
                 ]}
             >
-                <Input
+                <Input.TextArea
+                    autoSize
                     onChange={handleChange}
                     allowClear
                     style={{ margin: '30px 0' }}

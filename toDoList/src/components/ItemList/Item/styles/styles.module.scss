@@ -21,6 +21,10 @@
 
 .text {
     color: $main-color;
+    max-width: calc(70vw);
+    overflow: hidden;
+    white-space: pre;
+    text-overflow: ellipsis;
     font-weight: 600;
     margin-left: 3px;
 }
