@@ -1,8 +1,9 @@
 import { createReducer } from "@reduxjs/toolkit";
-import { addItem, AddItemAction } from "./actionCreators";
+import { AddItemAction, DeleteItemAction } from "./actionCreators";
 
 
 export interface ItemType {
+    id: string,
     value: string,
     date: string,
 }
@@ -12,14 +13,17 @@ interface InitialState {
 }
 
 const initialState: InitialState = {
-    ItemList: []
+    ItemList: [],
 }
 
 export const reducer = createReducer(
     initialState,
     {
         ['ADD_ITEM']: (state, action: AddItemAction) => {
-            state.ItemList.unshift(action.payload);
+            state.ItemList.push(action.payload);
+        },
+        ['DELETE_ITEM']: (state, action: DeleteItemAction) => {
+            state.ItemList = state.ItemList.filter(e => e.id !== action.payload);
         }
     }
 );

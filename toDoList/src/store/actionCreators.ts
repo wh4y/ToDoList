@@ -1,4 +1,4 @@
-import { createAction } from "@reduxjs/toolkit";
+import { v4 } from "uuid";
 import { ItemType } from "./toDoReducer";
 
 
@@ -11,9 +11,22 @@ export const addItem = (value: string): AddItemAction => {
     return {
         type: 'ADD_ITEM',
         payload: {
+            id: v4(),
             value,
             date: new Date().toUTCString(),
         }
     }
 }
 
+
+export interface DeleteItemAction {
+    type: string,
+    payload: string,
+}
+
+export const deleteItem = (id: string): DeleteItemAction => {
+    return {
+        type: 'DELETE_ITEM',
+        payload: id,
+    }
+}

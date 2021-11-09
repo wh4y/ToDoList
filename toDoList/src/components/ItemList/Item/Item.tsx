@@ -1,16 +1,25 @@
 import { DeleteOutlined } from "@ant-design/icons";
 import { Modal } from "antd";
-import { FC, useState } from "react";
+import { Dispatch, FC, useState } from "react";
+import { useDispatch } from "react-redux";
+import { deleteItem } from "../../../store/actionCreators";
+import { AppDispatch } from "../../../store/store";
 import { ItemType } from "../../../store/toDoReducer";
 import styles from "./styles/styles.module.scss";
 
 
-const Item: FC<ItemType> = ({value, date}) => {
+const Item: FC<ItemType> = ({ value, date, id }) => {
 
     const [isModalOpen, SetIsModalOpen] = useState(false);
+    const dispatch = useDispatch<AppDispatch>();
 
     const toggleModalMode = () => {
         SetIsModalOpen(!isModalOpen);
+    }
+
+    const handleDelete = (e: React.MouseEvent) => {
+        e.stopPropagation();
+        dispatch(deleteItem(id));
     }
 
     return (
@@ -31,7 +40,7 @@ const Item: FC<ItemType> = ({value, date}) => {
                 <span className={styles.text}>{value}</span>
                 <DeleteOutlined
                     className={styles.delete__btn}
-                    onClick={e => e.stopPropagation()}
+                    onClick={handleDelete}
                 />
             </div>
         </>
