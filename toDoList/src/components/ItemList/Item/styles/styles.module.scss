@@ -19,6 +19,51 @@
     
 }
 
+.progress__wrapper {
+    display: flex;
+    height: fit-content;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 0px;
+
+    .progress__circle__wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .progress__tools{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .progress__btn {
+            color: $main-color;
+            font-size: calc(3.5vh - .5vw);
+            margin: 15px;
+        }
+    }
+}
+
+.status__indicator {
+    font-size: 1.5em;
+    padding: 0 6px;   
+}
+
+.modal__body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .info__holder {
+        margin-left: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+}
+
+
 .text {
     color: $main-color;
     max-width: calc(70vw);
