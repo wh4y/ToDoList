@@ -19,6 +19,10 @@
 
         .toDo__logo__span {
             color: $primary-color;
+
+            .last__child {
+                color: $primary-active-color;
+            }
         }
     }
 }

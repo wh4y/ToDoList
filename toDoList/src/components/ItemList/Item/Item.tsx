@@ -56,10 +56,10 @@ const Item: FC<ItemType> = ({ value, date, id }) => {
                 ]}
             >
                 <Input.TextArea
-                    autoSize
+                    autoSize={{ minRows: 1, maxRows: 15 }}
                     onChange={handleChange}
                     allowClear
-                    style={{ margin: '30px 0' }}
+                    style={{ margin: '30px 0'}}
                     value={inputValue}
                     onPressEnter={handleEdit}
                 />

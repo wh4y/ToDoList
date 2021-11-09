@@ -27,7 +27,7 @@ const Header: FC = () => {
             <div className={styles.logo}>
                 <Typography>
                     <Text className={styles.logoText}>
-                        My own <span className={styles.toDo__logo__span}>toDos</span> ;)
+                        My own <span className={styles.toDo__logo__span}>toDo<span className={styles.last__child}>s</span></span> ;)
                     </Text>
                 </Typography>
             </div>
