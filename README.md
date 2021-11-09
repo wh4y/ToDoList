@@ -1,9 +1,9 @@
 # My first to do list ;)
 ---
----
 
 ### foreword
----
+So, first of all I would say the following thoughts:
+It's my first sigle project, uploaded to github and third traing project powered with Reactjs. 
 
 ![alt preview](https://sun9-10.userapi.com/impf/-f8PUEb-_P10B1-6slfforZiDOXMkgkxLyMzwg/Dms685uRfcc.jpg?size=800x500&quality=96&sign=dac6bd8abe9d17f60122a530cd91d4a3&type=album "Screenshot of application ;)")
 
