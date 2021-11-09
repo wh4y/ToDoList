@@ -49,18 +49,6 @@ const Item: FC<ItemType> = ({ value, date, id }) => {
                     value={inputValue}
                     onPressEnter={handleEdit}
                 />
-                {/* <div className={styles.modal__body}>
-                    <ProgressBar
-                        progressStatus={progressStatus}
-                        setProgressStatus={setProgressStatus}
-                        setToDoStatus={setToDoStatus}
-                    />
-                    <ItemInfo
-                        id={id}
-                        date={date}
-                        toDoStatus={toDoStatus}
-                    />
-                </div> */}
                 <ModalBody
                     id={id}
                     date={date}
