@@ -3,10 +3,7 @@ import { FC, useState } from "react";
 import { ItemType } from "../../../store/toDoReducer";
 import DisplayItem from "./DisplayItem/DisplayItem";
 import useItem from "./hooks/useItem/useItem";
-import ItemInfo from "./ItemInfo/ItemInfo";
 import ModalBody from "./ModalBody/ModalBody";
-import ProgressBar from "./ProgressBar/ProgressBar";
-import styles from "./styles/styles.module.scss";
 
 
 const Item: FC<ItemType> = ({ value, date, id }) => {
