@@ -30,3 +30,6 @@ So, it's an application powered with Reactjs as I said before, that is meant to 
 Interface of this application does not represent something beyond complex and ingenious. it was made up with Ant Design componets: Input, Typography, Modal, Progress, Icons. 
 
 ![alt Interface of application](https://sun9-27.userapi.com/impf/sAJgkJ0pAUmw8MB9rBIDmnB6zFF8HHYth2Gitg/RMhOw4QzfSw.jpg?size=800x500&quality=96&sign=d0c94362a5abe15d6e828dfbd87cc1d8&type=album "Interface")
+
+1. Text Input
+  Allow you to enter the text of your note.
