@@ -16,7 +16,7 @@ So, it's an application powered with Reactjs as I said before, that is meant to 
 
 Sorry for the quality of the screenshots.
 
-![alt screenshot](https://sun9-66.userapi.com/impf/VEommBWpNUl9E2kUKOI9A74GJ-YvqPQaNEvvqA/p1UxIUCy9qk.jpg?size=800x500&quality=96&sign=5c940764b23cf2745617ef5d8bff2e26&type=album "app")
+![alt screenshot](https://sun9-85.userapi.com/impf/-E71llo2VQA9BPmh6hm5yvwS76a-uJFHYToQ9w/nlAyNb766gQ.jpg?size=800x379&quality=96&sign=c4af21ca916e0a0071c018c40c0ad1cc&type=album "app")
 
 ## Technologies
 
