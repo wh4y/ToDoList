@@ -30,3 +30,22 @@ export const deleteItem = (id: string): DeleteItemAction => {
         payload: id,
     }
 }
+
+
+export interface SetItemValue {
+    type: string,
+    payload: {
+        value: string,
+        id: string,
+    }
+}
+
+export const setItemValue = (value: string, id: string): SetItemValue => {
+    return {
+        type: 'SET_ITEM_VALUE',
+        payload: {
+            value,
+            id,
+        }
+    }
+}

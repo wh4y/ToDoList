@@ -1,14 +1,16 @@
 import { DeleteOutlined } from "@ant-design/icons";
-import { Modal } from "antd";
-import { Dispatch, FC, useState } from "react";
+import { Input, Modal } from "antd";
+import { FC, useRef, useState } from "react";
 import { useDispatch } from "react-redux";
-import { deleteItem } from "../../../store/actionCreators";
+import { deleteItem, setItemValue } from "../../../store/actionCreators";
 import { AppDispatch } from "../../../store/store";
 import { ItemType } from "../../../store/toDoReducer";
 import styles from "./styles/styles.module.scss";
 
 
 const Item: FC<ItemType> = ({ value, date, id }) => {
+
+    const [inputValue, setInputValue] = useState(value);
 
     const [isModalOpen, SetIsModalOpen] = useState(false);
     const dispatch = useDispatch<AppDispatch>();
@@ -22,6 +24,20 @@ const Item: FC<ItemType> = ({ value, date, id }) => {
         dispatch(deleteItem(id));
     }
 
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setInputValue(e.target.value);
+    }
+
+    const handeBlur = () => {
+        setInputValue(value);
+    }
+
+    const handleEdit = () => {
+        dispatch(setItemValue(inputValue, id));
+        toggleModalMode();
+    }
+
+
     return (
         <>
             <Modal
@@ -29,8 +45,15 @@ const Item: FC<ItemType> = ({ value, date, id }) => {
                 onCancel={toggleModalMode}
                 footer={null}
             >
-                <p>{value}</p>
-                <p>{date}</p>
+                <Input
+                    onBlur={handeBlur}
+                    onChange={handleChange}
+                    allowClear
+                    style={{ margin: '30px 0' }}
+                    defaultValue={inputValue}
+                    onPressEnter={handleEdit}
+                />
+                <label style={{ fontWeight: 600 }}>Added: </label><span>{date}</span>
             </Modal>
 
             <div

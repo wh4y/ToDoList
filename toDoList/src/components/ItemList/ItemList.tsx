@@ -11,7 +11,7 @@ const ItemList: FC = () => {
 
     return (
         <div className={styles.list__wrapper}>
-            {itemList.map((elem, id) => <Item {...elem} key={id} />)}
+            {itemList.map((elem) => <Item {...elem} key={elem.id} />)}
         </div>
     );
 }
