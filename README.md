@@ -43,3 +43,9 @@ Interface of this application does not represent something beyond complex and in
 >Indicates whether the task is completed.
 
 ![alt Interface of modal](https://sun9-19.userapi.com/impf/NSnSMpihfrEwm-7CNnGzJCjaZDGvZKJFi0COig/E9D2076zovY.jpg?size=800x500&quality=96&sign=981e99b1d977d88c98aea43f4fbb6d20&type=album"Interface(Modal)")
+
+7. **Progress indicator**
+>Shows the percentage of completion of the task.
+8. **Text input**
+>Allows you to read/edit text of this note. Сan expand and show all text if it exceeds the allowed length.
+>![alt Interface of modal](https://sun9-82.userapi.com/impf/sJtMA5MW6NDn1mTaqSjUFewW4iAV97ueRYQivg/Dpu0CDTXMUI.jpg?size=800x500&quality=96&sign=3ec4c32338fbd6d5faf9d16e70fe9147&type=album"Interface(Modal)")
