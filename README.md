@@ -31,6 +31,6 @@ Interface of this application does not represent something beyond complex and in
 
 ![alt Interface of application](https://sun9-27.userapi.com/impf/sAJgkJ0pAUmw8MB9rBIDmnB6zFF8HHYth2Gitg/RMhOw4QzfSw.jpg?size=800x500&quality=96&sign=d0c94362a5abe15d6e828dfbd87cc1d8&type=album "Interface")
 
-1. Text Input:  Allows you to enter the text of your note.
-2. Add button:  Adding new note(you can make the same using key "Enter").
-3. "toDo" element(note):  Element of toDo list contains necessary information about your "toDo": text, date, uuid(unique key), progress indicator.
+1. **Text Input**:  Allows you to enter the text of your note.
+2. **Add button**:  Adding new note(you can make the same using key "Enter").
+3. **"toDo" element(note)**:  Element of toDo list contains necessary information about your "toDo": text, date, uuid(unique key), progress indicator.
