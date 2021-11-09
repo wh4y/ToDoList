@@ -27,6 +27,29 @@ Sorry for the quality of the screenshots.
 * Sass(SCSS)
 * Uuid
 
+## Gettig started
+
+First of all, you should clone this repo.
+```
+git clone https://github.com/wh4y/ToDoList.git
+```
+After that, you should open terminal in project folder contains yarn.lock and package.json. And enter:
+```
+yarn install
+```
+or 
+```
+npm install
+```
+To start application:
+```
+yarn start
+```
+or
+```
+npm start
+```
+
 ## Interface
 
 Interface of this application does not represent something beyond complex and ingenious. it was made up with Ant Design componets: Input, Typography, Modal, Progress, Icons. 
@@ -62,26 +85,3 @@ Interface of this application does not represent something beyond complex and in
 
 
 6th point was devoured :)
-
-## Gettig started
-
-First of all, you should clone this repo.
-```
-git clone https://github.com/wh4y/ToDoList.git
-```
-After that, you should open terminal in project folder contains yarn.lock and package.json. And enter:
-```
-yarn install
-```
-or 
-```
-npm install
-```
-To start application:
-```
-yarn start
-```
-or
-```
-npm start
-```
