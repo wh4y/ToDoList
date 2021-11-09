@@ -1,5 +1,5 @@
 import { DeleteOutlined } from "@ant-design/icons";
-import { Input, Modal } from "antd";
+import { Button, Input, Modal } from "antd";
 import { FC, useRef, useState } from "react";
 import { useDispatch } from "react-redux";
 import { deleteItem, setItemValue } from "../../../store/actionCreators";
@@ -12,11 +12,20 @@ const Item: FC<ItemType> = ({ value, date, id }) => {
 
     const [inputValue, setInputValue] = useState(value);
 
-    const [isModalOpen, SetIsModalOpen] = useState(false);
+    const [isModalOpen, setIsModalOpen] = useState(false);
     const dispatch = useDispatch<AppDispatch>();
 
-    const toggleModalMode = () => {
-        SetIsModalOpen(!isModalOpen);
+    const handleModalCancel = () => {
+        setInputValue(value);
+        handleModalClose();
+    }
+
+    const handleModalOpen = () => {
+        setIsModalOpen(true);
+    }
+
+    const handleModalClose = () => {
+        setIsModalOpen(false);
     }
 
     const handleDelete = (e: React.MouseEvent) => {
@@ -28,13 +37,9 @@ const Item: FC<ItemType> = ({ value, date, id }) => {
         setInputValue(e.target.value);
     }
 
-    const handeBlur = () => {
-        setInputValue(value);
-    }
-
     const handleEdit = () => {
         dispatch(setItemValue(inputValue, id));
-        toggleModalMode();
+        handleModalClose();
     }
 
 
@@ -42,15 +47,18 @@ const Item: FC<ItemType> = ({ value, date, id }) => {
         <>
             <Modal
                 visible={isModalOpen}
-                onCancel={toggleModalMode}
-                footer={null}
+                onCancel={handleModalCancel}
+                footer={[
+                    <Button onClick={handleEdit}>
+                        Confirm
+                    </Button>
+                ]}
             >
                 <Input
-                    onBlur={handeBlur}
                     onChange={handleChange}
                     allowClear
                     style={{ margin: '30px 0' }}
-                    defaultValue={inputValue}
+                    value={inputValue}
                     onPressEnter={handleEdit}
                 />
                 <label style={{ fontWeight: 600 }}>Added: </label><span>{date}</span>
@@ -58,7 +66,7 @@ const Item: FC<ItemType> = ({ value, date, id }) => {
 
             <div
                 className={styles.item__wrapper}
-                onClick={toggleModalMode}
+                onClick={handleModalOpen}
             >
                 <span className={styles.text}>{value}</span>
                 <DeleteOutlined
