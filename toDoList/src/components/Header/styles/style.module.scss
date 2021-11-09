@@ -12,6 +12,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    user-select: none;
     margin: calc(1vh + 1vw) 0;
 
     .logoText {
