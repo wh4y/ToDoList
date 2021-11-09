@@ -1,105 +1,16 @@
 @import "./../../../common/styles/appStyles.scss";
 
 
-.item__wrapper {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    justify-content: space-between;
-    height: calc(4vh + 1vw);
-    padding: 5px 5px;
-    margin-top: 10px;
-    border-left: 2px solid $primary-color;
-    transition: .35s;
-
-    &:hover {
-        background-color: $primary-faded-color;
-        transition: .35s;
-    }
-    
-}
-
-.progress__wrapper {
-    display: flex;
-    height: fit-content;
-    justify-content: flex-start;
-    align-items: center;
-    margin-bottom: 0px;
-
-    .progress__circle__wrapper{
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-    }
-
-    .progress__tools{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-
-        .progress__btn {
-            color: $main-color;
-            font-size: calc(3.5vh - .5vw);
-            margin: 15px;
-        }
-    }
-
-    // @media (max-width: 800px) {
-    //     justify-content: center;
-    // }
-}
-
-.status__indicator {
-    font-size: 1.5em;
-    padding: 0 6px;   
-}
-
-.modal__body {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-    .info__holder {
-        margin-left: 10px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-    }
-
-    // @media (max-width: 800px) {
-    //     flex-direction: column;
-
-    //     .info__holder {
-    //         margin-top: 20px;
-    //         margin-left: 0px;
-    //         display: flex;
-    //         flex-direction: column;
-    //         justify-content: space-around;
-    //     }
-    // }
-}
+//Secret page ;)
+//
+//Once there was something here,
+//but one day I decided to quickly
+//separate this component and
+//everything flew away from here
 
 
-.text {
-    color: $main-color;
-    max-width: calc(15vw + 20vh);
-    overflow: hidden;
-    white-space: pre;
-    text-overflow: ellipsis;
-    font-weight: 600;
-    margin-left: 3px;
-}
 
-.delete__btn {
-    font-size: 1.5em;
-    padding: 0 6px;
-    transition: .35;
 
-    &:active {
-        transform: rotate(180deg);
-        color: $primary-active-color;
-        transition: .35s;
-    }
 
-    @include btn-hover-active();
-}
+
+

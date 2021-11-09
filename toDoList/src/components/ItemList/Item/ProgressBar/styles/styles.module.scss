@@ -1,0 +1,32 @@
+@import "./../../../../common/styles/appStyles.scss";
+
+
+.progress__wrapper {
+    display: flex;
+    height: fit-content;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 0px;
+
+    .progress__circle__wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .progress__tools{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .progress__btn {
+            color: $main-color;
+            font-size: calc(3.5vh - .5vw);
+            margin: 15px;
+        }
+    }
+
+    // @media (max-width: 800px) {
+    //     justify-content: center;
+    // }
+}

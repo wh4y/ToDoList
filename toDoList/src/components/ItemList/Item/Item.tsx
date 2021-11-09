@@ -1,27 +1,15 @@
-import { CheckOutlined, DeleteOutlined, MinusSquareOutlined, PlusSquareOutlined } from "@ant-design/icons";
-import { Button, Input, Modal, Progress } from "antd";
+import { Button, Input, Modal } from "antd";
 import { FC, useState } from "react";
-import { useDispatch } from "react-redux";
-import { deleteItem, setItemValue } from "../../../store/actionCreators";
-import { AppDispatch } from "../../../store/store";
 import { ItemType } from "../../../store/toDoReducer";
+import DisplayItem from "./DisplayItem/DisplayItem";
+import useItem from "./hooks/useItem/useItem";
+import ItemInfo from "./ItemInfo/ItemInfo";
+import ModalBody from "./ModalBody/ModalBody";
+import ProgressBar from "./ProgressBar/ProgressBar";
 import styles from "./styles/styles.module.scss";
 
 
 const Item: FC<ItemType> = ({ value, date, id }) => {
-
-    const [progressStatus, setProgressStatus] = useState<number>(0);
-    const [toDoStatus, setToDoStatus] = useState('Not started');
-
-    const [inputValue, setInputValue] = useState(value);
-
-    const [isModalOpen, setIsModalOpen] = useState(false);
-    const dispatch = useDispatch<AppDispatch>();
-
-    const handleModalCancel = () => {
-        setInputValue(value);
-        handleModalClose();
-    }
 
     const handleModalOpen = () => {
         setIsModalOpen(true);
@@ -31,32 +19,18 @@ const Item: FC<ItemType> = ({ value, date, id }) => {
         setIsModalOpen(false);
     }
 
-    const handleDelete = (e: React.MouseEvent) => {
-        e.stopPropagation();
-        dispatch(deleteItem(id));
-    }
+    const {
+        handleEdit, handleChange, handleDelete,
+        toDoStatus, inputValue, progressStatus,
+        setToDoStatus, setInputValue, setProgressStatus
+    } = useItem(value, id, handleModalClose);
 
-    const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-        setInputValue(e.target.value);
-    }
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
-    const handleEdit = () => {
-        dispatch(setItemValue(inputValue, id));
+    const handleModalCancel = () => {
+        setInputValue(value);
         handleModalClose();
     }
-
-    const progressUp = () => {
-        if (progressStatus !== 100) setProgressStatus(progressStatus + 5);
-        if (progressStatus < 100) setToDoStatus('In progress');
-        if (progressStatus + 5 === 100) setToDoStatus('Done');
-    }
-
-    const progressDown = () => {
-        if (progressStatus !== 0) setProgressStatus(progressStatus - 5)
-        if (progressStatus - 5 < 100) setToDoStatus('In progress');
-        if (progressStatus - 5 === 0) setToDoStatus('Not started');
-    }
-
 
     return (
         <>
@@ -78,54 +52,34 @@ const Item: FC<ItemType> = ({ value, date, id }) => {
                     value={inputValue}
                     onPressEnter={handleEdit}
                 />
-                <div className={styles.modal__body}>
-                    <div className={styles.progress__wrapper}>
-                        <div className={styles.progress__circle__wrapper}>
-                            <Progress
-                                width={100}
-                                className={styles.progress__circle}
-                                type={'circle'}
-                                percent={progressStatus}
-                            />
-                        </div>
-                        <div className={styles.progress__tools}>
-                            <PlusSquareOutlined className={styles.progress__btn} onClick={progressUp} />
-                            <MinusSquareOutlined className={styles.progress__btn} onClick={progressDown} />
-                        </div>
-                    </div>
-                    <div className={styles.info__holder}>
-                        <span>
-                            <label style={{ fontWeight: 600, userSelect: 'none' }}>Added: </label><span>{date}</span>
-                        </span>
-                        <span>
-                            <label style={{ fontWeight: 600, userSelect: 'none' }}>UUID: </label><span>{id}</span>
-                        </span>
-                        <span>
-                            <label style={{ fontWeight: 600, userSelect: 'none' }}>Status: </label><span>{toDoStatus}</span>
-                        </span>
-                    </div>
-                </div>
+                {/* <div className={styles.modal__body}>
+                    <ProgressBar
+                        progressStatus={progressStatus}
+                        setProgressStatus={setProgressStatus}
+                        setToDoStatus={setToDoStatus}
+                    />
+                    <ItemInfo
+                        id={id}
+                        date={date}
+                        toDoStatus={toDoStatus}
+                    />
+                </div> */}
+                <ModalBody
+                    id={id}
+                    date={date}
+                    toDoStatus={toDoStatus}
+                    progressStatus={progressStatus}
+                    setProgressStatus={setProgressStatus}
+                    setToDoStatus={setToDoStatus}
+                />
             </Modal>
 
-            <div
-                className={styles.item__wrapper}
-                onClick={handleModalOpen}
-            >
-                <span className={styles.text}>{value}</span>
-                <div className={styles.btn__holder}>
-                    {
-                        toDoStatus === 'Done' ?
-                            <CheckOutlined
-                                className={styles.status__indicator}
-                                style={{ color: 'green' }}
-                            /> : null
-                    }
-                    <DeleteOutlined
-                        className={styles.delete__btn}
-                        onClick={handleDelete}
-                    />
-                </div>
-            </div>
+            <DisplayItem
+                value={value}
+                handleModalOpen={handleModalOpen}
+                handleDelete={handleDelete}
+                toDoStatus={toDoStatus}
+            />
         </>
     );
 }

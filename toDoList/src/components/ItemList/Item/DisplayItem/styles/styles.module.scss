@@ -1,0 +1,49 @@
+@import "./../../../../common/styles/appStyles.scss";
+
+
+.item__wrapper {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: space-between;
+    height: calc(4vh + 1vw);
+    padding: 5px 5px;
+    margin-top: 10px;
+    border-left: 2px solid $primary-color;
+    transition: .35s;
+
+    .text {
+        color: $main-color;
+        max-width: calc(15vw + 20vh);
+        overflow: hidden;
+        white-space: pre;
+        text-overflow: ellipsis;
+        font-weight: 600;
+        margin-left: 3px;
+    }
+
+    &:hover {
+        background-color: $primary-faded-color;
+        transition: .35s;
+    }
+    
+}
+
+.status__indicator {
+    font-size: 1.5em;
+    padding: 0 6px;   
+}
+
+.delete__btn {
+    font-size: 1.5em;
+    padding: 0 6px;
+    transition: .35;
+
+    &:active {
+        transform: rotate(180deg);
+        color: $primary-active-color;
+        transition: .35s;
+    }
+
+    @include btn-hover-active();
+}
