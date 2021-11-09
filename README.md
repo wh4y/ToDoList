@@ -21,7 +21,6 @@ So, it's an application powered with Reactjs as I said before, that is meant to 
 * Redux
 * React-Redux
 * Redux-Toolkit
-* Redux-Toolkit
 * Ant Design
 * Sass(SCSS)
 * Uuid
