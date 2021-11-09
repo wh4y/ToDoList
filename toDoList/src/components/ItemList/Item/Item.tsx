@@ -1,7 +1,8 @@
 import { DeleteOutlined } from "@ant-design/icons";
 import { Button, Input, Modal } from "antd";
-import { FC, useRef, useState } from "react";
+import { FC, useState } from "react";
 import { useDispatch } from "react-redux";
+import { v4 } from "uuid";
 import { deleteItem, setItemValue } from "../../../store/actionCreators";
 import { AppDispatch } from "../../../store/store";
 import { ItemType } from "../../../store/toDoReducer";
@@ -46,6 +47,7 @@ const Item: FC<ItemType> = ({ value, date, id }) => {
     return (
         <>
             <Modal
+                key={v4()}
                 visible={isModalOpen}
                 onCancel={handleModalCancel}
                 footer={[
@@ -55,6 +57,7 @@ const Item: FC<ItemType> = ({ value, date, id }) => {
                 ]}
             >
                 <Input.TextArea
+                    key={v4()}
                     autoSize
                     onChange={handleChange}
                     allowClear
