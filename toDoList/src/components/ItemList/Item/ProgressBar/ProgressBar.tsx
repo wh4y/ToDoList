@@ -21,7 +21,7 @@ const ProgressBar: FC<IProgressBarProps> = ({progressStatus, setProgressStatus, 
     const progressDown = () => {
         if (progressStatus !== 0) setProgressStatus(progressStatus - 5)
         if (progressStatus - 5 < 100) setToDoStatus('In progress');
-        if (progressStatus - 5 === 0) setToDoStatus('Not started');
+        if (progressStatus - 5 <= 0) setToDoStatus('Not started');
     }
 
     return (
