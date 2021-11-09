@@ -29,6 +29,7 @@ Sorry for the quality of the screenshots.
 
 ## Gettig started
 
+You must have nodejs!
 First of all, you should clone this repo.
 ```
 git clone https://github.com/wh4y/ToDoList.git
@@ -85,3 +86,18 @@ Interface of this application does not represent something beyond complex and in
 
 
 6th point was devoured :)
+
+### My observations and remarks
+
+I want to note that the architecture of the application and the code itself is poor. These nuances are due to lack of experience and haste. In the beginning, due to my own laziness, I did not divide the code into files, but when I decided, it became wildly inconvenient to do and everything turned out to be very crooked. Many things now I would not do the way I did.
+
+I want to point out the following points:
+
+- A more adequate code splitting is needed: correct division into components and thoughtful types of props. the connection between components should not resemble a messy spider web, but a perfectly understandable graph. This will make the project easier to read and will affect the complexity of maintenance.
+
+- I would move the modal into a separate hook that would return an array containing the window component itself and the interface for interacting with it. However, if you do this, the window loses its "roll-up" coordinates when closed.
+
+- It is necessary to fix the bug that is visible in the image.
+>![alt Bug with text area](https://sun9-36.userapi.com/impf/DGtf_E3oZ5oETFQgvZHfMCDn5tJT1VK1VWYhKg/WWFN8NkiKLw.jpg?size=800x500&quality=96&sign=9c3418daa7a7ff4fa92c0afd2362d8b0&type=album"Bug with text area")
+
+- Styles are not written in the most correct way, which will affect the complexity of project support.
