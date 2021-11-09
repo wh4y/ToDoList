@@ -43,6 +43,10 @@
             margin: 15px;
         }
     }
+
+    // @media (max-width: 800px) {
+    //     justify-content: center;
+    // }
 }
 
 .status__indicator {
@@ -61,12 +65,24 @@
         flex-direction: column;
         justify-content: space-around;
     }
+
+    // @media (max-width: 800px) {
+    //     flex-direction: column;
+
+    //     .info__holder {
+    //         margin-top: 20px;
+    //         margin-left: 0px;
+    //         display: flex;
+    //         flex-direction: column;
+    //         justify-content: space-around;
+    //     }
+    // }
 }
 
 
 .text {
     color: $main-color;
-    max-width: calc(70vw);
+    max-width: calc(15vw + 20vh);
     overflow: hidden;
     white-space: pre;
     text-overflow: ellipsis;
