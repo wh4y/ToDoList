@@ -11,7 +11,7 @@ It's my first sigle project, uploaded to github and second traing project powere
 ## Description
 
 I don't know what to say about ToDoLiSiT, because everyone knows what is it ;)
-So, it's application powered with Reactjs as I said before, that is meant to store our dreams and plans. So my version of such an application can do it as well. By the way, way ur able to use some extra possibilities provided by this application. About this possibilitie you will know later.
+So, it's an application powered with Reactjs as I said before, that is meant to store our dreams and plans. By the way, way ur able to use some extra possibilities provided by this application. About this possibilitie you will know later.
 
 ![alt preview](https://sun9-10.userapi.com/impf/-f8PUEb-_P10B1-6slfforZiDOXMkgkxLyMzwg/Dms685uRfcc.jpg?size=800x500&quality=96&sign=dac6bd8abe9d17f60122a530cd91d4a3&type=album "Screenshot of application ;)")
 
