@@ -6,8 +6,21 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+}
 
-    margin-top: 5vh;
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: calc(1vh + 1vw) 0;
+
+    .logoText {
+        font-size: calc(3vh + 2vw);
+
+        .toDo__logo__span {
+            color: $primary-color;
+        }
+    }
 }
 
 .toDo__input {
