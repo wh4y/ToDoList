@@ -15,16 +15,16 @@ So, it's an application powered with Reactjs as I said before, that is meant to 
 
 ## Technologies
 
-⋅⋅* React
-⋅⋅* Typescript
-⋅⋅* Create-React-App
-⋅⋅* Redux
-⋅⋅* React-Redux
-⋅⋅* Redux-Toolkit
-⋅⋅* Redux-Toolkit
-⋅⋅* Ant Design
-⋅⋅* Sass(SCSS)
-⋅⋅* Uuid
+* React
+* Typescript
+* Create-React-App
+* Redux
+* React-Redux
+* Redux-Toolkit
+* Redux-Toolkit
+* Ant Design
+* Sass(SCSS)
+* Uuid
 
 ## Interface
 
