@@ -37,3 +37,7 @@ Interface of this application does not represent something beyond complex and in
 >Adding new note(you can make the same using key "Enter").
 3. **"toDo" element(note)**
 >Element of toDo list contains necessary information about your "toDo": text, date, uuid(unique key), progress indicator.
+4. **Delete button**
+>Delete corresponding note.
+5. **Done indicator**
+>Indicates whether the task is completed.
