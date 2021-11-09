@@ -98,6 +98,6 @@ I want to point out the following points:
 - I would move the modal into a separate hook that would return an array containing the window component itself and the interface for interacting with it. However, if you do this, the window loses its "roll-up" coordinates when closed.
 
 - It is necessary to fix the bug that is visible in the image.
->![alt Bug with text area](https://sun9-36.userapi.com/impf/DGtf_E3oZ5oETFQgvZHfMCDn5tJT1VK1VWYhKg/WWFN8NkiKLw.jpg?size=800x500&quality=96&sign=9c3418daa7a7ff4fa92c0afd2362d8b0&type=album"Bug with text area")
+>![alt text area bug](https://sun1.beltelecom-by-minsk.userapi.com/impf/DGtf_E3oZ5oETFQgvZHfMCDn5tJT1VK1VWYhKg/WWFN8NkiKLw.jpg?size=800x500&quality=96&sign=9c3418daa7a7ff4fa92c0afd2362d8b0&type=album "bug")
 
 - Styles are not written in the most correct way, which will affect the complexity of project support.
