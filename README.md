@@ -59,3 +59,5 @@ Interface of this application does not represent something beyond complex and in
 >Confirm changes.
 12. **Modal close button**
 >Close modal.
+
+6th point was devoured :)
