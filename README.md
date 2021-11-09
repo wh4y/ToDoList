@@ -41,3 +41,5 @@ Interface of this application does not represent something beyond complex and in
 >Delete corresponding note.
 5. **Done indicator**
 >Indicates whether the task is completed.
+
+![alt Interface of modal](https://sun9-19.userapi.com/impf/NSnSMpihfrEwm-7CNnGzJCjaZDGvZKJFi0COig/E9D2076zovY.jpg?size=800x500&quality=96&sign=981e99b1d977d88c98aea43f4fbb6d20&type=album"Interface(Modal)")
